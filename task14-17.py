@@ -3,7 +3,7 @@
 digit = int(input("Введите число:"))
 
 def is_even(x):
-    return x == 0
+    return x%2 == 0
 if digit%2==0:
     return True
 else:
