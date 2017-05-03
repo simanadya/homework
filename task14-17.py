@@ -7,7 +7,7 @@ def is_even(x):
 if digit%2==0:
     return True
 else:
-    return False
+   
 
 
 
