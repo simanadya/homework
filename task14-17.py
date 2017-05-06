@@ -11,6 +11,7 @@ else:
    
 # # Task 15===========================================
 
+
 import math
 x1 = int(input("Координaта x1:"))
 y1 = int(input("Координaта y1:"))
@@ -18,16 +19,14 @@ r1 = int(input("Координата радиуса r1:"))
 x2 = int(input("Координaта x2:"))
 y2 = int(input("Координaта y2:"))
 r2 = int(input("Координата радиуса r2:"))
-result = math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (r2 - r1)**2)
+result = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
-
-def intersection_of_the_circles(x1, y1, r1, x2, y2, r2):
-    return x1, y1, r1, x2, y2, r2 == 0
-if intersection_of_the_circles(result):
-    print ("%result - Intersectioned" % result)
+def intersection_of_the_circles(x1, y1, x2, y2):
+    return result == 0
+if intersection_of_the_circles(x1, y1, x2, y2):
+    print ("%d - Intersectioned" % result)
 else:
-    print("%result - Not Intersectioned" % result)
-    
+    print("%d - Not Intersectioned" % result)
 
 # Task 16===================================================
 
@@ -51,11 +50,9 @@ a = int(input("a = "))
 b = int(input("b = "))
 c = int(input("c = "))
 
-
-Discriminant = int(b**2) - int(4) * int(a) * int(c)
-print("D = ", Discriminant)
-
 def solve_equation (a, b, c ):
+    Discriminant = int(b**2) - int(4) * int(a) * int(c)
+    print("D = ", Discriminant)
     if Discriminant > 0:
         D = (int(Discriminant) ** 0.5)
         x1 = (-b + Discriminant) / (2 * a)
