@@ -23,7 +23,7 @@ result = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
 def intersection_of_the_circles(x1, y1, x2, y2):
     return result == 0
-if intersection_of_the_circles(x1, y1, x2, y2):
+if result < r1 + r2:#две окружности пересекаются, если расстояние между их центрами меньше суммы их радиусов
     print ("%d - Intersectioned" % result)
 else:
     print("%d - Not Intersectioned" % result)
@@ -35,12 +35,15 @@ v2 = 70
 time1 = 4/v1
 time2 = 6/v2
 
+
 def train_clash (v1, v2):
-    return v1, v2 ==0
-if time1<time2:
-    print ("clash")
+    return v1, v2 == 0
+if train_clash(v1, v2):
+    time1<time2
+    print ("time1<time2 ==> Trains will clash")
 else:
-    print("ok")
+    print("Trains will not clash")
+
 
 #
 # Task 17========================================
