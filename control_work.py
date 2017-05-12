@@ -18,44 +18,29 @@ print ("Result 3 is = %d" % result_3)
 n = int(input("Введите пятизначное число: "))
 n = str(n)
 n = [int(x) for x in n]
-#============
-def result(n):
-    even = 0
-    odd = 0
-    for x in n:
-        if x%2 ==0:
-            even +=1
-        else:
-            odd +=1
-    mult *= odd(n)
-    return mult
-mult = result(n)
+odd = 0
+mult = 1
+for x in n:
+    if x%2 > 0:
+        mult *= int(x)
 print("Произведение нечётных чисел = ", mult)
-#============
-def is_odd_digits(n):
-    n1 = n//10000
-    n2 = n//1000
-    n3 = n//100
-    n4 = n//10
-    n5 = n//1
 
-    if is_odd_digits(n1,n2,n3,n4,n5):
-        return n % 2 != 0
-        mult = n1*n2*n3*n4*n5
-    else:
-
-mult = is_odd_digits(n)
-print ("Result is = %d" % mult)
 
 
 #Task 5=============================================
 
-dist1 = [float(input("Введите первое число: "))]
-dist2 = [float(input("Введите второе число: "))]
+d1 = (input("Введите первое число: "))
+d2 = (input("Введите второе число: "))
 my_position = 10
 
-def diff_dist(elem):
-    return abs(elem - my_position)
-dist1.sort(key = diff_dist)
-dist2.sort(key = diff_dist)
-print (diff_dist(my_position))
+def diff_dist(d1, d2):
+    distance1 = d1 - my_position
+    distance2 = d2 - my_position
+    if distance1 >= distance2:
+        print (d1)
+    else:
+        print (d2)
+    return diff_dist(d1,d2)
+# diff_dist(dist1).sort(key = my_position)
+# abs.sort(key = diff_dist)
+print(diff_dist(d1,d2))
